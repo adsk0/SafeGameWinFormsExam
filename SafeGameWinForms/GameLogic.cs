@@ -66,7 +66,7 @@ namespace SafeGameWinForms
         public void BntDifficaltyLevelOnClick(object sender, EventArgs e)  // catches  clicks on difficalty level buttons
         {
             FillingMatrix(addMatrix);
-            Level difficaltyLevel = (Level)Convert.ToInt32((sender as Button).Tag);
+            difficaltyLevel = (Level)Convert.ToInt32((sender as Button).Tag);
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
@@ -243,7 +243,7 @@ namespace SafeGameWinForms
                 {
                     if (addMatrix[0, 0] == addMatrix[i, j])
                     {
-                        if (difficaltyLevel == Level.easy && i < 3 && j < 3)
+                        if (difficaltyLevel == Level.medium && i < 3 && j < 3)
                         {
                             winEasy++;
                             if (winEasy == 9)
@@ -251,7 +251,7 @@ namespace SafeGameWinForms
                                 return true;
                             }
                         }
-                        if (difficaltyLevel == Level.medium && i < 4 && j < 4)
+                        if (difficaltyLevel == Level.easy && i < 4 && j < 4)
                         {
                             winMedium++;
                             if (winMedium == 16)

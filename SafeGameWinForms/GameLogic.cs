@@ -152,7 +152,7 @@ namespace SafeGameWinForms
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    if (arrButtons[i, j].Image == Resources.boneSmallHorizontal && arrButtons[i, j].BackColor == Color.Red)
+                    if (addMatrix[i, j] is true)
                     {
                         arrButtons[i, j].Image = Resources.boneSmallVertical;
                         arrButtons[i, j].BackColor = Color.Blue;
@@ -162,33 +162,7 @@ namespace SafeGameWinForms
                         arrButtons[i, j].Image = Resources.boneSmallHorizontal;
                         arrButtons[i, j].BackColor = Color.Red;
                     }
-                    arrButtons[i, j].Image = GetPositionInfo(addMatrix[i, j]);
-                    arrButtons[i, j].BackColor = GetColorInfo(addMatrix[i, j]);
                 }
-            }
-        }
-
-        public static Bitmap GetPositionInfo(bool cell)  // tells to button about what image it has
-        {
-            if (cell is true)
-            {
-                return Resources.boneSmallHorizontal;
-            }
-            else
-            {
-                return Resources.boneSmallVertical;
-            }
-        }
-
-        public static Color GetColorInfo(bool cell)   // tells to button about what color it should be
-        {
-            if (cell is true)
-            {
-                return Color.Red;
-            }
-            else
-            {
-                return Color.Blue;
             }
         }
 

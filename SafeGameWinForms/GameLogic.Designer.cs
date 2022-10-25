@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace SafeGameWinForms
 {
-    partial class Form1
+    partial class GameLogic
     {
         /// <summary>
         /// Required designer variable.

@@ -18,7 +18,7 @@ using Image = System.Drawing.Image;
 
 namespace SafeGameWinForms
 {
-    public partial class Form1 : Form
+    public partial class GameLogic : Form
     {
         private bool[,] addMatrix = new bool[5, 5];         //  matrix creating
         private Button[,] arrButtons;                       // creating buttons array
@@ -40,7 +40,7 @@ namespace SafeGameWinForms
             return addMatrix;
         }
 
-        public Form1()
+        public GameLogic()
         {
             FillingMatrix(addMatrix);
             InitializeComponent();
